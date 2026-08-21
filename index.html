@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Itihaas — listen to the place you're standing in</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="frame">
+  <div class="screen">
+    <div class="app-scroll" id="appScroll">
+
+      <header class="top">
+        <div class="greet-row">
+          <div class="greet">
+            <div class="eyebrow" id="greetTime">Good evening</div>
+            <div class="place">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="10" r="3"/><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/></svg>
+              Across India
+            </div>
+          </div>
+          <div class="avatar">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 4-6 8-6s8 2 8 6"/></svg>
+          </div>
+        </div>
+        <div class="lang-selector" id="langRow"></div>
+        <div class="search-row" id="searchRow">
+          <input type="text" id="searchInput" placeholder="Search a place, an area, a story...">
+        </div>
+        <div class="chips" id="chipsRow"></div>
+      </header>
+
+      <main>
+        <section class="view active" id="view-discover">
+          <div id="featuredSlot"></div>
+          <div class="section-label">Verified, with trust shown before it plays</div>
+          <div id="cardList"></div>
+        </section>
+
+        <section class="view" id="view-share">
+          <h2 style="font-family:var(--display); font-weight:400; font-size:24px; margin:4px 0 8px;">Record a memory</h2>
+          <p style="font-size:14px; color:var(--ink-dim); font-weight:300; margin:0 0 24px;">Share in first person, in Kannada, Tamil, Telugu or English. Curators keep it private until claims, consent, source and context are reviewed.</p>
+          <form id="shareForm">
+            <div class="field"><label>Place</label><input type="text" id="f-place" placeholder="Which place is this about" required></div>
+            <div class="field"><label>Language</label>
+              <select id="f-lang">
+                <option value="Kannada">Kannada</option>
+                <option value="Tamil">Tamil</option>
+                <option value="Telugu">Telugu</option>
+                <option value="English">English</option>
+              </select>
+            </div>
+            <div class="field"><label>Your relationship to this place</label><input type="text" id="f-relationship" placeholder="Caretaker, resident, visitor, family..."></div>
+            <div class="field"><label>Attribution</label>
+              <div class="radio-row">
+                <label class="radio-chip"><input type="radio" name="attribution" value="Anonymous" checked><span>Anonymous</span></label>
+                <label class="radio-chip"><input type="radio" name="attribution" value="Named"><span>Named</span></label>
+                <label class="radio-chip"><input type="radio" name="attribution" value="Private review only"><span>Private review only</span></label>
+              </div>
+            </div>
+            <div class="field"><label>Your memory</label>
+              <textarea id="f-story" placeholder="I remember... When I stand here..." required></textarea>
+              <div class="prompts">Gentle prompts: "I remember..." · "When I stand here..." · "ನಾನು ಇಲ್ಲಿ ನಿಂತಾಗ..."</div>
+            </div>
+            <label class="consent"><input type="checkbox" id="f-consent" required><span>I consent to curator review of this memory before any public use.</span></label>
+            <button type="submit" class="btn" style="width:100%;">Submit memory</button>
+          </form>
+        </section>
+
+        <section class="view about" id="view-about">
+          <h2>Every story here has been checked</h2>
+          <p>Itihaas holds two kinds of stories. Gold standard verified ones, checked by a curator against evidence and context, and community contributed ones, clearly marked while they wait their turn. You always know which one you're hearing.</p>
+          <div class="rule">Where stories come from</div>
+          <p>Some arrive from locals, shopkeepers, families and visitors, in their own words. Others are sought out by our team at places where no one would think to submit on their own, an old caretaker, a retired groundskeeper, someone who has never been asked before.</p>
+          <div class="rule">Why listen instead of read</div>
+          <p>A place is easier to feel than to read about. Press play on any verified story and it's read back to you the way it was told, so you can keep walking, keep looking, and let the story meet you where you're standing.</p>
+          <div class="rule">On moderation</div>
+          <p>A story only carries the Verified seal once it's been recorded in the narrator's own voice. Until then it's marked Under moderation, the text has already been checked, but the voice recording is still pending, so you'll hear it read in English while that catches up.</p>
+          <div class="rule">On languages</div>
+          <p>Stories are being recorded in Kannada, Tamil and Telugu by their original narrators, not machine translated. Where a recording doesn't exist yet for the language you've picked, you'll hear the English narration instead, and we'll say so plainly rather than pretend otherwise.</p>
+          <div class="rule">Coverage, for now</div>
+          <p>Historic places lead the way, forts, ruins and monuments. Religious places, food places, and institutions and campuses are opening up alongside them.</p>
+        </section>
+      </main>
+    </div>
+
+    <nav class="tabs">
+      <button class="tab-btn active" data-view="discover">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="10" r="3"/><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/></svg>
+        Discover
+      </button>
+      <button class="tab-btn" data-view="share">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 15a3 3 0 0 0 3-3V6a3 3 0 0 0-6 0v6a3 3 0 0 0 3 3z"/><path d="M19 11a7 7 0 0 1-14 0M12 18v3"/></svg>
+        Share
+      </button>
+      <button class="tab-btn" data-view="about">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 8h.01M11 12h1v5h1"/></svg>
+        About
+      </button>
+    </nav>
+
+    <div class="backdrop" id="detailBackdrop" onclick="ItihaasApp.closeSheet()"></div>
+    <div class="sheet" id="detailSheet">
+      <div class="sheet-handle"><span></span></div>
+      <div class="sheet-inner" id="sheetInner"></div>
+    </div>
+
+  </div>
+</div>
+
+<svg width="0" height="0" style="position:absolute">
+  <defs>
+    <linearGradient id="gradHistoric" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#E7A94F"/><stop offset="100%" stop-color="#B5492E"/>
+    </linearGradient>
+    <linearGradient id="gradGarden" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#D8B65A"/><stop offset="100%" stop-color="#5E7350"/>
+    </linearGradient>
+    <linearGradient id="gradInstitution" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#DE9166"/><stop offset="100%" stop-color="#7C4A34"/>
+    </linearGradient>
+    <linearGradient id="gradTemple" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F0C25E"/><stop offset="100%" stop-color="#B5722E"/>
+    </linearGradient>
+    <linearGradient id="gradFood" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#E8935A"/><stop offset="100%" stop-color="#A6402B"/>
+    </linearGradient>
+    <linearGradient id="gradBusiness" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#B69A78"/><stop offset="100%" stop-color="#5C4A38"/>
+    </linearGradient>
+    <linearGradient id="gradForest" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#8FA05E"/><stop offset="100%" stop-color="#3E4E2E"/>
+    </linearGradient>
+    <linearGradient id="gradTiger" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#E2A23B"/><stop offset="100%" stop-color="#5A3420"/>
+    </linearGradient>
+    <linearGradient id="gradStone" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#C9AE8C"/><stop offset="100%" stop-color="#7A5C42"/>
+    </linearGradient>
+  </defs>
+</svg>
+
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
