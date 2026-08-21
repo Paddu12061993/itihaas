@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Share a memory — Itihaas</title>
+<link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="bar">
+    <a href="index.html" class="brand">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="10" r="3"/><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/></svg>
+      Itihaas
+    </a>
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="explore.html">Explore</a>
+      <a href="share.html" class="active">Share a Memory</a>
+      <a href="about.html">About</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="form-wrap">
+    <h1>Record a memory</h1>
+    <p>Share in first person, in Kannada, Tamil, Telugu or English. Curators keep it private until claims, consent, source and context are reviewed.</p>
+
+    <div class="confirm-banner" id="confirmBanner">Thank you — your memory has been queued for curator review.</div>
+
+    <form id="shareForm">
+      <div class="field"><label>Place</label><input type="text" id="f-place" placeholder="Which place is this about" required></div>
+      <div class="field"><label>Language</label>
+        <select id="f-lang">
+          <option value="Kannada">Kannada</option>
+          <option value="Tamil">Tamil</option>
+          <option value="Telugu">Telugu</option>
+          <option value="English">English</option>
+        </select>
+      </div>
+      <div class="field"><label>Your relationship to this place</label><input type="text" id="f-relationship" placeholder="Caretaker, resident, visitor, family..."></div>
+      <div class="field"><label>Attribution</label>
+        <div class="radio-row">
+          <label class="radio-chip"><input type="radio" name="attribution" value="Anonymous" checked><span>Anonymous</span></label>
+          <label class="radio-chip"><input type="radio" name="attribution" value="Named"><span>Named</span></label>
+          <label class="radio-chip"><input type="radio" name="attribution" value="Private review only"><span>Private review only</span></label>
+        </div>
+      </div>
+      <div class="field"><label>Your memory</label>
+        <textarea id="f-story" placeholder="I remember... When I stand here..." required></textarea>
+        <div class="prompts">Gentle prompts: "I remember..." · "When I stand here..." · "ನಾನು ಇಲ್ಲಿ ನಿಂತಾಗ..."</div>
+      </div>
+      <label class="consent"><input type="checkbox" id="f-consent" required><span>I consent to curator review of this memory before any public use.</span></label>
+      <button type="submit" class="btn" style="width:100%; justify-content:center;">Submit memory</button>
+    </form>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-brand">Itihaas</div>
+    <div class="foot-links">
+      <a href="index.html">Home</a>
+      <a href="explore.html">Explore</a>
+      <a href="about.html">About</a>
+    </div>
+    <div class="foot-note">A concept prototype for IIM Bangalore. Submissions here are session-only and not sent anywhere.</div>
+  </div>
+</footer>
+
+<script src="js/site.js"></script>
+<script>ItihaasSite.initShareForm();</script>
+</body>
+</html>
