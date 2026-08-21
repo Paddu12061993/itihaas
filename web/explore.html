@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Explore stories — Itihaas</title>
+<link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="bar">
+    <a href="index.html" class="brand">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="10" r="3"/><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/></svg>
+      Itihaas
+    </a>
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="explore.html" class="active">Explore</a>
+      <a href="share.html">Share a Memory</a>
+      <a href="about.html">About</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <div id="storyDetail" class="detail"></div>
+
+  <div id="exploreGridView">
+    <div class="explore-head">
+      <h1>Explore stories</h1>
+      <p>Verified, narrated stories tied to real places. Search by name, filter by category, or pick a language to listen in.</p>
+    </div>
+    <div class="controls">
+      <div class="search-row"><input type="text" id="searchInput" placeholder="Search a place, an area, a story..."></div>
+      <div class="lang-selector" id="langRow"></div>
+      <div class="chips" id="chipsRow"></div>
+    </div>
+    <div class="grid" id="cardList"></div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-brand">Itihaas</div>
+    <div class="foot-links">
+      <a href="index.html">Home</a>
+      <a href="share.html">Share a Memory</a>
+      <a href="about.html">About</a>
+    </div>
+    <div class="foot-note">A concept prototype for IIM Bangalore. Photography via Wikimedia Commons, CC BY-SA.</div>
+  </div>
+</footer>
+
+<script src="../js/data.js"></script>
+<script src="js/site.js"></script>
+<script>ItihaasSite.initExplore();</script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Itihaas — listen to the place you're standing in</title>
+<link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="bar">
+    <a href="index.html" class="brand">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="10" r="3"/><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/></svg>
+      Itihaas
+    </a>
+    <nav class="site-nav">
+      <a href="index.html" class="active">Home</a>
+      <a href="explore.html">Explore</a>
+      <a href="share.html">Share a Memory</a>
+      <a href="about.html">About</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <div class="eyebrow">Stories, told in the narrator's own voice</div>
+      <h1>Listen to the place you're standing in</h1>
+      <p>Itihaas holds verified, narrated stories tied to real places across India — forts, temples, old darshinis, and campuses — told by the people who actually know them: caretakers, shopkeepers, priests, teachers, family.</p>
+      <div class="hero-ctas">
+        <a class="btn" href="explore.html">Explore stories</a>
+        <a class="btn ghost" href="share.html">Share a memory</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap">
+    <div class="steps">
+      <div class="step">
+        <div class="num">01</div>
+        <h3>Discover a place</h3>
+        <p>Search or browse by category — Historic, Religious, Food, Institutions and more — across cities in India.</p>
+      </div>
+      <div class="step">
+        <div class="num">02</div>
+        <h3>Listen, don't just read</h3>
+        <p>Press play and hear the story read back in Kannada, Tamil, Telugu or English, the way it was told.</p>
+      </div>
+      <div class="step">
+        <div class="num">03</div>
+        <h3>Know what's verified</h3>
+        <p>Every story shows its status plainly — Verified with a recorded voice, or Under moderation while a recording catches up.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap preview">
+    <div class="section-head">
+      <h2>Featured stories</h2>
+      <a href="explore.html">See all stories →</a>
+    </div>
+    <div class="grid" id="previewGrid"></div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-brand">Itihaas</div>
+    <div class="foot-links">
+      <a href="explore.html">Explore</a>
+      <a href="share.html">Share a Memory</a>
+      <a href="about.html">About</a>
+    </div>
+    <div class="foot-note">A concept prototype for IIM Bangalore. Photography via Wikimedia Commons, CC BY-SA.</div>
+  </div>
+</footer>
+
+<script src="../js/data.js"></script>
+<script src="js/site.js"></script>
+<script>ItihaasSite.initPreview('previewGrid', 3);</script>
+</body>
+</html>
